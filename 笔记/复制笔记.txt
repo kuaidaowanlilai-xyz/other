@@ -1,0 +1,262 @@
+//瞬间返回到最顶部
+document.documentElement.scrollTop = 0
+
+contenteditable //变编辑
+
+查询 search
+
+//常忘单词
+target="_blank"//a标签打开新窗口
+ipconfig//查ip
+cls//清空
+calc
+absolute
+addEventListener
+localStorage
+sessionStorage
+$emit  发布
+$on  订阅
+$router
+$route
+text-decoration:none;//去下划线 || underline//下划线 || overline//上划线 || line-through//中划线 
+!important
+outline: none;//去蓝边
+cursor: pointer;//变手
+box-sizing: border-box;  怪异盒|| content-box 标准盒|| inherit || initial
+text-indent:2em;//首行缩进
+clear()//清空缓存
+maxlength="50" //input框最大长度
+Number.isInteger() //方法用来判断给定的参数是否为整数
+trim()//去除字符串的头尾空格
+border-spacing:0;  //css表格对应的cellspacing
+transition: all .5s;//过渡
+user-select: none;//禁止选中文字
+letter-spacing: 1px;//字间距
+text-transform: lowercase;字母全部小写 || uppercase; 字母全部大写
+box-shadow: 10px 10px 5px #888888; //css3阴影
+text-shadow:5px 2px 6px #000;//字体阴影
+boeder: dashed;//虚线
+text-align-last: justify; //平分字间距
+letter-spacing: 8px;//设置1字间距
+outline: none; // 去除选中状态边框
+
+new Date().getTime(); //时间戳
+
+assign??
+
+选项 / 生命周期钩子
+beforeCreate
+created
+beforeMount
+mounted
+beforeUpdate
+updated
+activated
+deactivated
+beforeDestroy
+destroyed
+errorCaptured
+
+//解决高度塌陷
+.clearfix:after {
+   content:""; 
+   display: block; 
+   clear:both; 
+}
+
+debugger;
+
+Promise
+async await
+
+switch(表达式) {
+     case n:
+        代码块
+        break;
+     default:
+        默认代码块
+}
+white-space: nowrap;  /*强制span不换行*/
+display: inline-block;  /*将span当做块级元素对待*/
+width: 32px;  /*限制宽度*/
+overflow: hidden;  /*超出宽度部分隐藏*/
+text-overflow: ellipsis;  /*超出部分以点号代替*/
+line-height: 0.9;  /*数字与之前的文字对齐*/
+
+
+//正则
+/^\/api(\/\w+)*\/?$/		匹配 /api  开头的路由
+/^([\u4E00-\u9FA5\uf900-\ufa2d·s]{2,20}|[a-zA-Z\\.\\s]{1,20})$/		姓名
+/^1[345789]\d{9}$/		手机号
+/^[0-9]\d{5}(?!\d)$/		邮政编码
+/^[^_IOZSVa-z\W]{2}\d{6}[^_IOZSVa-z\W]{10}$/g		社会统一信用代码验证
+/\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/		邮箱
+
+
+//工具
+Swagger UI
+mstsc//远程连接
+
+<router-link :to="{path: '/problems'}">
+
+
+
+// ajax用POST请求时，用来设置请求头信息的
+xhr.setRequestHeader('content-type', 'application/x-www-form-urlencoded')
+headers: {
+  'Content-Type': 'application/json;charset=UTF-8',
+}
+
+//配置axios参数
+axios.defaults.baseURL = baseUrl;//获取请求的基本地址
+axios.defaults.headers.common['xxxtoken'] = '123213';//token令牌
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';//设置axios post请求方式头部
+axios.defaults.withCredentials=true;//携带session
+
+//请求数据
+this.$axios({
+  url: '',
+  method: 'post',
+  params: {
+      page: 10
+  },
+  data: JSON.stringify(this.form)
+}).then(res=>{
+  console.log('', res)
+}).catch(err=>{
+  console.log('', err);
+})
+
+
+
+//PHP连接mySQL数据库
+<?php
+  $conn = mysql_connect('localhost', 'root', 'root');//建立连接
+  mysql_select_db('test1913');//数据库
+  $res = mysql_query('SELECT * FROM `student`');//sql语句
+  $row = mysql_fetch_assoc($res);//查询的返回值
+  mysql_close($conn);//关闭
+?>
+
+
+mongoDB显示当前数据库中的集合（类似关系数据库中的表）
+show collections;
+
+
+可以设置每页显示数据的大小，用DBQuery.shellBatchSize= 50;这样每页就显示50条记录了。
+
+
+mstsc 连接远程服务器
+
+
+//.vue文件的基本格式
+<template>
+    <div class="根节点类名">
+    </div>
+</template>
+<script>
+export default {
+}
+</script>
+<style lang="stylus" scoped>
+</style>
+
+
+//用户代码片段路径
+C:\Users\Lenovo\AppData\Roaming\Code\User\snippets\
+//host文件
+C:\Windows\System32\drivers\etc
+
+
+this.$confirm('确定提交?', '提示', {
+  confirmButtonText: '确定',
+  cancelButtonText: '取消',
+  type: 'warning'
+}).then(() => {
+  this.$message({
+    type: 'success',
+    message: '提交成功!'
+  })
+}).catch(err => {
+  throw new Error(err)
+  this.$message({
+    type: 'info',
+    message: '已取消提交'
+  });         
+})
+
+
+滚动条几个属性，主要有下面7个属性
+::-webkit-scrollbar 滚动条整体部分，可以设置宽度啥的
+::-webkit-scrollbar-button 滚动条两端的按钮
+::-webkit-scrollbar-track  外层轨道
+::-webkit-scrollbar-track-piece  内层滚动槽
+::-webkit-scrollbar-thumb 滚动的滑块
+::-webkit-scrollbar-corner 边角
+::-webkit-resizer 定义右下角拖动块的样式
+
+//常用滚动条样式
+.leftList::-webkit-scrollbar{
+  width: 6px;
+  height: 6px;
+}
+.leftList::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(0,0,0,0.2);
+}
+.leftList::-webkit-scrollbar-track{
+  background-color: #fff;
+}
+//\\
+
+
+if(res.data.code == 200){
+    this.$message({
+        type: 'success',
+        message: `保存成功`
+    });    
+}else{
+    this.$message({
+        type: 'error',
+        message: res.data.msg
+    });          
+}
+
+
+//提前为内置方法封装自定义方法
+Date.prototype.Format = function (fmt) { //author: meizz
+    var o = {
+        "M+": this.getMonth() + 1, //月份
+        "d+": this.getDate(), //日
+        "h+": this.getHours(), //小时
+        "m+": this.getMinutes(), //分
+        "s+": this.getSeconds(), //秒
+        "q+": Math.floor((this.getMonth() + 3) / 3), //季度
+        "S": this.getMilliseconds() //毫秒
+    };
+    if (/(y+)/.test(fmt))
+        fmt = fmt.replace(RegExp.$1, (this.getFullYear() + "").substr(4 - RegExp.$1.length));
+    for (var k in o)
+        if (new RegExp("(" + k + ")").test(fmt))
+            fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
+    return fmt;
+}
+
+
+//vscode启动静态服务器
+browser-sync start -s -f **/* --directroy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

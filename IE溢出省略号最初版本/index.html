@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IE浏览器多行文字溢出显示省略号</title>
+  <style>
+    .myDiv {
+      background-color: aquamarine;
+      width: 280px;
+      margin: 100px auto;
+
+      line-height: 20px;
+      max-height: 60px;/* 最多显示三行 */
+
+      overflow: hidden;
+      position: relative;
+    }
+
+    .myDiv:before {
+      content: '...';/* 在所在dom内的末尾插入的内容 */
+
+      position: absolute;
+      top: 40px;/* 60px - 20px ，定位在第三行 */
+      right: 0;
+
+      width: 20px;
+      text-align: right;
+      background-image: linear-gradient(to right, transparent , aquamarine 50%, aquamarine);/* transparent 透明色 */
+    }
+
+    .myDiv:after {
+      content: '';
+      background-color: aquamarine;
+      width: 11px;/* 11px刚好遮住三个点 */
+      height: 20px;/* 高度设置跟行高一样 */
+      float: right;/* 向右浮动起来 */
+
+      position: relative;
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="myDiv">在日常编写页面中，我们经常遇到内容行数过多时，需要出现 “省略号” 来处理但是又要考虑IE浏览器或IE内核浏览器的兼容性</div>
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+.saoleiDiv{
+  margin: 0 auto;
+}
+
+/* .saoleiDiv:after {
+  content:""; 
+  display: block; 
+  clear:both; 
+} */
+
+/* .saolei_fangge{
+  margin: 1px;
+  width: calc(10% - 2px);
+  height: calc(10% - 2px);
+  text-align: center;
+  color: rgb(207, 102, 102);
+  background-color: rgb(63, 107, 172);
+  float: left;
+  border-radius: 2px;
+  cursor: pointer;
+  line-height: 48px;
+  font-size: 24px;
+} */

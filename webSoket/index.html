@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聊天室</title>
+    <link rel="shortcut icon" href="../../img/wanlilai.ico" />
+    <style>
+        .video{
+            width: 80px;
+            height: 128px;
+            position: fixed;
+            top: 85px;
+            left: 430px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>webSocket</h1>
+    <div id="chatroom" style="overflow: auto;width: 400px;height: 350px;border: 1px solid red;"></div>
+    <input type="text" id="sendInput">
+    <input type="button" id="sendButton" value="发送">
+    <input type="button" id="qingping" value="清屏">
+    <video id="video" class="video"></video>
+
+    <script src="./wsClient.js"></script>
+</body>
+
+</html>
