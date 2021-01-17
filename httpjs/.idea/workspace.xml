@@ -4,7 +4,7 @@
     <list default="true" id="7bbe7967-3e19-4216-bfdf-0b290bf5cfb8" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../笔记/复制笔记.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../笔记/复制笔记.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610621813380</updated>
       <workItem from="1610621814398" duration="2296000" />
-      <workItem from="1610698380977" duration="4814000" />
+      <workItem from="1610698380977" duration="12855000" />
     </task>
     <servers />
   </component>
