@@ -46,6 +46,8 @@ new Date().getTime(); //时间戳
 @focus	//获取焦点触发
 @clear	//在点击由 clearable 属性生成的清空按钮时触发
 
+contextmenu  //右键事件
+
 assign??
 
 选项 / 生命周期钩子
@@ -271,7 +273,7 @@ unzip 解压
 
 
 
-
+npm cache clean --force 清缓存
 
 
 
