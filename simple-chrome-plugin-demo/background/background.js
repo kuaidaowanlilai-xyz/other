@@ -15,13 +15,14 @@ for (let i = 0; i < novelArr.length; i++) {
   }
 }
 
-let i_i = 0
+let i_i = localStorage.getItem('i_i') ? localStorage.getItem('i_i') - 0 : 0
 // 监听来自content-script的消息
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   // console.log('收到content消息', request)
-  if (request.code) {
-    i_i++
-  }
+  i_i += request.code
+  i_i < 0 ? i_i = 0 : i_i
+  i_i >= novelArr.length ? i_i = novelArr.length - 1 : i_i
+  localStorage.setItem('i_i', i_i)
   sendResponse({
     i_i,
     novelArr

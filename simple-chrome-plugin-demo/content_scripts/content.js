@@ -14,7 +14,8 @@ chromeNovelRead.style.display = 'none'
 
 
 body.addEventListener('keydown', (e) => {
-  if (e.code === 'Backquote') {
+  // console.log(e)
+  if (e.code === 'Backquote' || e.code === 'ArrowRight') {
     if (e.altKey) {
       if (chromeNovelRead.style.display === 'none') {
         chromeNovelRead.style.display = 'block'
@@ -28,6 +29,14 @@ body.addEventListener('keydown', (e) => {
           chromeNovelRead.innerText = response.novelArr[response.i_i]
         })
       }
+    }
+  }
+  if (e.code === 'ArrowLeft') {
+    if (chromeNovelRead.style.display !== 'none') {
+      chrome.runtime.sendMessage({msg: '请后台返回小说数据给我', code: -1}, function (response) {
+        // console.log('收到来自后台的回复：' + response.i_i);
+        chromeNovelRead.innerText = response.novelArr[response.i_i]
+      })
     }
   }
 })
