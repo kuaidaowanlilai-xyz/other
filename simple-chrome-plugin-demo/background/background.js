@@ -1,6 +1,5 @@
 console.log('这里是background.js')
 
-
 let chapterArr = [] // 章节列表数据
 let novelArr = chromeNovelData.split('\n').filter((item, index) => {
   return item.trim()
@@ -34,6 +33,18 @@ function chapterArrFun() {
   return chapterArr
 }
 
+// 向 popup 传递 localStorage
+function bgLocalStorage() {
+  return {
+    getItem: function (key) {
+      return localStorage.getItem(key)
+    },
+    setItem: function (key, value) {
+      localStorage.setItem(key, value)
+    }
+  }
+}
+
 // 接收 popup 的章节跳转
 function chapterJump(index) {
   console.log('章节跳转', index)
@@ -57,3 +68,4 @@ function sendMessageToContentScript(message, callback) {
     })
   })
 }
+

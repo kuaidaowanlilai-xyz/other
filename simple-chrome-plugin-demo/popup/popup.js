@@ -13,7 +13,12 @@ console.log('你好，我是popup！', chapterArr)
 const saoleiDIv = document.querySelector('#saoleiDIv')
 let divStr = ''
 for (let i = 0; i < chapterArr.length; i++) {
-  divStr += `<div class="listItem" title="${chapterArr[i].title}">
+  let fontColor = ''
+  let bgI_i = bg.bgLocalStorage().getItem('i_i')
+  if (bgI_i > chapterArr[i].index && bgI_i < chapterArr[i + 1].index){
+    fontColor = 'style="color: #2aa1ff"'
+  }
+    divStr += `<div class="listItem" ${fontColor} title="${chapterArr[i].title}">
                 ${chapterArr[i].title.replace(/（.*求.+票。*）/, '')}
                 <span class="indexSpan">${chapterArr[i].index}</span>
             </div>`
