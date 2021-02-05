@@ -259,6 +259,9 @@ body, dl, dt, dd, p, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, select, fiel
 browser-sync start -s -f **/* --directroy
 
 
+47.94.142.206/king@2586
+
+
 
 pwd 当前文件夹
 创建空文件:   touch +文件名   # 一般是先touch好一个文件然后vim这个文件. 很好奇为什么叫touch.
@@ -275,8 +278,10 @@ pwd 当前文件夹
 
 unzip 解压
 
+查找安装路径： whereis nginx
 
 
+ctrl + R   >   scp
 
 
 npm cache clean --force 清缓存
