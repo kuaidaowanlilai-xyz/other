@@ -22,7 +22,7 @@ text-decoration:none;//去下划线 || underline//下划线 || overline//上划�
 !important
 outline: none;//去蓝边
 cursor: pointer;//变手
-box-sizing: border-box;  怪异盒|| content-box 标准盒|| inherit || initial
+box-sizing: border-box;  怪异盒|| content-box 标准盒|| inherit 继承父元素|| initial 默认值
 text-indent:2em;//首行缩进
 clear()//清空缓存
 maxlength="50" //input框最大长度
@@ -40,7 +40,10 @@ text-align-last: justify; //平分字间距
 letter-spacing: 8px;//设置1字间距
 outline: none; // 去除选中状态边框
 
-new Date().getTime(); //时间戳
+new Date().getTime() //时间戳
+Date.now() //时间戳
+
+decodeURI(string) // 解析URI
 
 @blur	//失去焦点触发
 @focus	//获取焦点触发
@@ -288,9 +291,12 @@ npm cache clean --force 清缓存
 
 
 
+## ECharts笔记
 
-
-
+// 偏移
+grid: {
+      top: '5% '
+    },
 
 
 
