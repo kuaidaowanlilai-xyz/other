@@ -39,19 +39,27 @@ boeder: dashed;//虚线
 text-align-last: justify; //平分字间距
 letter-spacing: 8px;//设置1字间距
 outline: none; // 去除选中状态边框
+white-space: nowrap;  // 强制span不换行
+text-overflow: ellipsis;  // 超出部分以点号代替
 
 new Date().getTime() //时间戳
 Date.now() //时间戳
-
 decodeURI(string) // 解析URI
+contextmenu  //右键事件
+
+debugger;
+Promise
+async await
+
+// blob转成blobUrl
+const blob = new Blob([二进制流], {type: 文件类型})
+const blobUrl = window.URL.createObjectURL(blob)
 
 @blur	//失去焦点触发
 @focus	//获取焦点触发
 @clear	//在点击由 clearable 属性生成的清空按钮时触发
 
-contextmenu  //右键事件
-
-assign??
+<router-link :to="{path: '/problems'}">
 
 选项 / 生命周期钩子
 beforeCreate
@@ -73,11 +81,6 @@ errorCaptured
    clear:both; 
 }
 
-debugger;
-
-Promise
-async await
-
 switch(表达式) {
      case n:
         代码块
@@ -85,12 +88,6 @@ switch(表达式) {
      default:
         默认代码块
 }
-white-space: nowrap;  /*强制span不换行*/
-display: inline-block;  /*将span当做块级元素对待*/
-width: 32px;  /*限制宽度*/
-overflow: hidden;  /*超出宽度部分隐藏*/
-text-overflow: ellipsis;  /*超出部分以点号代替*/
-line-height: 0.9;  /*数字与之前的文字对齐*/
 
 
 //正则
@@ -105,9 +102,6 @@ line-height: 0.9;  /*数字与之前的文字对齐*/
 //工具
 Swagger UI
 mstsc//远程连接
-
-<router-link :to="{path: '/problems'}">
-
 
 
 // ajax用POST请求时，用来设置请求头信息的
@@ -151,7 +145,6 @@ this.$axios({
 mongoDB显示当前数据库中的集合（类似关系数据库中的表）
 show collections;
 
-
 可以设置每页显示数据的大小，用DBQuery.shellBatchSize= 50;这样每页就显示50条记录了。
 
 
@@ -171,7 +164,7 @@ export default {
 </style>
 
 
-//用户代码片段路径
+//vscode用户代码片段路径
 C:\Users\Lenovo\AppData\Roaming\Code\User\snippets\
 //host文件
 C:\Windows\System32\drivers\etc
@@ -217,19 +210,6 @@ this.$confirm('确定提交?', '提示', {
   background-color: #fff;
 }
 //\\
-
-
-if(res.data.code == 200){
-    this.$message({
-        type: 'success',
-        message: `保存成功`
-    });    
-}else{
-    this.$message({
-        type: 'error',
-        message: res.data.msg
-    });          
-}
 
 
 //提前为内置方法封装自定义方法
@@ -292,7 +272,6 @@ npm cache clean --force 清缓存
 
 
 ## ECharts笔记
-
 // 偏移
 grid: {
       top: '5% '
