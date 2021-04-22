@@ -44,6 +44,7 @@ text-overflow: ellipsis;  // 超出部分以点号代替
 
 new Date().getTime() //时间戳
 Date.now() //时间戳
+Math.floor(Math.random() * 10) // 随机数
 decodeURI(string) // 解析URI
 contextmenu  //右键事件
 
@@ -88,6 +89,15 @@ switch(表达式) {
      default:
         默认代码块
 }
+
+// 节流
+const delay = (() => {
+  let timer = 0
+  return (callback, ms) => {
+    clearTimeout(timer)
+    timer = setTimeout(callback, ms)
+  }
+})()
 
 
 //正则
@@ -268,6 +278,9 @@ ctrl + R   >   scp
 
 
 npm cache clean --force 清缓存
+
+// win10刷新dns
+ipconfig /flushdns
 
 
 
