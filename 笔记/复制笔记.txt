@@ -56,6 +56,9 @@ async await
 const blob = new Blob([二进制流], {type: 文件类型})
 const blobUrl = window.URL.createObjectURL(blob)
 
+dom.focus() // 获取焦点
+input.select() // 全选输入框中的内容
+
 @blur	//失去焦点触发
 @focus	//获取焦点触发
 @clear	//在点击由 clearable 属性生成的清空按钮时触发
@@ -174,10 +177,12 @@ export default {
 </style>
 
 
-//vscode用户代码片段路径
+// vscode用户代码片段路径
 C:\Users\Lenovo\AppData\Roaming\Code\User\snippets\
-//host文件
+// host文件
 C:\Windows\System32\drivers\etc
+// npm全局依赖源码路径
+C:\Users\用户名\AppData\Roaming\npm
 
 
 this.$confirm('确定提交?', '提示', {
@@ -289,6 +294,7 @@ ipconfig /flushdns
 grid: {
       top: '5% '
     },
+
 
 
 
