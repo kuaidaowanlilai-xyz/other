@@ -183,7 +183,7 @@ comjs.cloneLoop = (x) => {
  * 复制到剪切板
  * @param {String} idStr dom的 id(#mydom) 或 class名(.mydom) 或 dom对象
  */
-comjs.copyFun = (idStr) => {
+comjs.copyToClipboard = (idStr) => {
   // console.log('复制到剪切板', idStr)
   let contentDom
   if (typeof idStr === 'string') {
