@@ -42,11 +42,12 @@ outline: none; // 去除选中状态边框
 white-space: nowrap;  // 强制span不换行
 text-overflow: ellipsis;  // 超出部分以点号代替
 
-new Date().getTime() //时间戳
-Date.now() //时间戳
+new Date().getTime() // 时间戳
+Date.now() // 时间戳
 Math.floor(Math.random() * 10) // 随机数
 decodeURI(string) // 解析URI
-contextmenu  //右键事件
+contextmenu  // 右键事件
+getComputedStyle() // 读取的样式是最终样式
 
 debugger;
 Promise
