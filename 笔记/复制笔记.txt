@@ -39,17 +39,31 @@ boeder: dashed;//虚线
 text-align-last: justify; //平分字间距
 letter-spacing: 8px;//设置1字间距
 outline: none; // 去除选中状态边框
+vertical-align: sub;// 图片对齐方式
 
-new Date().getTime(); //时间戳
+在div上添加 draggable="true" 即可拖动该div
+
+new Date().getTime()  //当前时间戳
+Date.now()  //当前时间戳
+
 
 @blur	//失去焦点触发
 @focus	//获取焦点触发
 @clear	//在点击由 clearable 属性生成的清空按钮时触发
 
 contextmenu  //右键事件
+arguments // js不确定参数用
+Object.assign // 常用于合并对象
+.contentWindow // 获取iframe的window
 
-assign??
 
+选项 / 数据
+data
+props
+propsData
+computed
+methods
+watch
 选项 / 生命周期钩子
 beforeCreate
 created
@@ -62,6 +76,7 @@ deactivated
 beforeDestroy
 destroyed
 errorCaptured
+
 
 //解决高度塌陷
 .clearfix:after {
@@ -206,7 +221,7 @@ this.$confirm('确定提交?', '提示', {
   width: 6px;
   height: 6px;
 }
-.leftList::-webkit-scrollbar-thumb {
+.leftList::-webkit-scrollbar-thumb{
   border-radius: 10px;
   background: rgba(0,0,0,0.2);
 }
