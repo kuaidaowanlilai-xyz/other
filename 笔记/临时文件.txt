@@ -1,0 +1,82 @@
+
+    // 复制到剪切板
+    copyFun(idStr) {
+      // console.log('复制到剪切板', idStr)
+      const contentDom = document.querySelector(idStr)
+      contentDom.focus()
+      if (window.getSelection) {
+        if (window.getSelection().baseOffset === window.getSelection().extentOffset) {
+          const range = document.createRange()
+          range.selectNodeContents(contentDom)
+          window.getSelection().removeAllRanges()
+          window.getSelection().addRange(range)
+        }
+      } else if (document.selection) {
+        const range = document.body.createTextRange()
+        range.moveToElementText(contentDom)
+        range.select()
+      }
+      // 执行复制
+      if (document.execCommand('copy')) {
+        this.$message({
+          type: 'success',
+          message: '已复制到剪切板！'
+        })
+      } else {
+        this.$message({
+          type: 'error',
+          message: '浏览器不支持复制功能，请手动复制'
+        })
+      }
+    },
+
+
+// 注册一个全局自定义指令 `v-badge` 小红点
+// `v-badge.value="10"` 显示数字
+Vue.directive('badge', {
+  // 当被绑定的元素插入到 DOM 中时……
+  inserted: function(el, binding, vnode) {
+    if (binding.value) {
+      console.log('badge', el, binding, vnode)
+      const badgeDom = document.createElement('span')
+      function badgeDomStyle() {
+        if (binding.arg === 'value') {
+          badgeDom.style = `
+            position: fixed;
+            top: ${el.getBoundingClientRect().top - 10}px;
+            left: ${el.getBoundingClientRect().left + el.offsetWidth - 10}px;
+            background-color: red;
+            height: 18px;
+            border-radius: 10px;
+            color: #fff;
+            z-index: 100;
+            font-size: 12px;
+            line-height: 18px;
+            padding: 0 6px;
+            text-align: center;
+            white-space: nowrap;
+          `
+          badgeDom.innerText = binding.value
+        } else {
+          badgeDom.style = `
+            position: fixed;
+            top: ${el.getBoundingClientRect().top - 5}px;
+            left: ${el.getBoundingClientRect().left + el.offsetWidth}px;
+            background-color: red;
+            width: 7px;
+            height: 7px;
+            border-radius: 4px;
+            z-index: 100;
+          `
+        }
+
+        console.log('width', el.offsetWidth)
+        console.log('left', el.offsetLeft)
+        console.log('top', el.offsetTop)
+      }
+      setTimeout(badgeDomStyle) // 等加载完页面后再插入
+      window.onresize = badgeDomStyle
+      el.parentElement.appendChild(badgeDom) // 插入到父元素，fixed定位，防止 el 是img等无法嵌套内容的标签
+    }
+  }
+})

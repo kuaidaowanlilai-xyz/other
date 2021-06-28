@@ -22,7 +22,7 @@ text-decoration:none;//去下划线 || underline//下划线 || overline//上划�
 !important
 outline: none;//去蓝边
 cursor: pointer;//变手
-box-sizing: border-box;  怪异盒|| content-box 标准盒|| inherit || initial
+box-sizing: border-box;  怪异盒|| content-box 标准盒|| inherit 继承父元素|| initial 默认值
 text-indent:2em;//首行缩进
 clear()//清空缓存
 maxlength="50" //input框最大长度
@@ -46,6 +46,26 @@ vertical-align: sub;// 图片对齐方式
 new Date().getTime()  //当前时间戳
 Date.now()  //当前时间戳
 
+white-space: nowrap;  // 强制span不换行
+text-overflow: ellipsis;  // 超出部分以点号代替
+
+new Date().getTime() // 时间戳
+Date.now() // 时间戳
+Math.floor(Math.random() * 10) // 随机数
+decodeURI(string) // 解析URI
+contextmenu  // 右键事件
+getComputedStyle() // 读取的样式是最终样式
+
+debugger;
+Promise
+async await
+
+// blob转成blobUrl
+const blob = new Blob([二进制流], {type: 文件类型})
+const blobUrl = window.URL.createObjectURL(blob)
+
+dom.focus() // 获取焦点
+input.select() // 全选输入框中的内容
 
 @blur	//失去焦点触发
 @focus	//获取焦点触发
@@ -64,6 +84,8 @@ propsData
 computed
 methods
 watch
+<router-link :to="{path: '/problems'}">
+
 选项 / 生命周期钩子
 beforeCreate
 created
@@ -85,11 +107,6 @@ errorCaptured
    clear:both; 
 }
 
-debugger;
-
-Promise
-async await
-
 switch(表达式) {
      case n:
         代码块
@@ -97,12 +114,15 @@ switch(表达式) {
      default:
         默认代码块
 }
-white-space: nowrap;  /*强制span不换行*/
-display: inline-block;  /*将span当做块级元素对待*/
-width: 32px;  /*限制宽度*/
-overflow: hidden;  /*超出宽度部分隐藏*/
-text-overflow: ellipsis;  /*超出部分以点号代替*/
-line-height: 0.9;  /*数字与之前的文字对齐*/
+
+// 节流
+const delay = (() => {
+  let timer = 0
+  return (callback, ms) => {
+    clearTimeout(timer)
+    timer = setTimeout(callback, ms)
+  }
+})()
 
 
 //正则
@@ -117,9 +137,6 @@ line-height: 0.9;  /*数字与之前的文字对齐*/
 //工具
 Swagger UI
 mstsc//远程连接
-
-<router-link :to="{path: '/problems'}">
-
 
 
 // ajax用POST请求时，用来设置请求头信息的
@@ -163,7 +180,6 @@ this.$axios({
 mongoDB显示当前数据库中的集合（类似关系数据库中的表）
 show collections;
 
-
 可以设置每页显示数据的大小，用DBQuery.shellBatchSize= 50;这样每页就显示50条记录了。
 
 
@@ -183,10 +199,12 @@ export default {
 </style>
 
 
-//用户代码片段路径
+// vscode用户代码片段路径
 C:\Users\Lenovo\AppData\Roaming\Code\User\snippets\
-//host文件
+// host文件
 C:\Windows\System32\drivers\etc
+// npm全局依赖源码路径
+C:\Users\用户名\AppData\Roaming\npm
 
 
 this.$confirm('确定提交?', '提示', {
@@ -229,19 +247,6 @@ this.$confirm('确定提交?', '提示', {
   background-color: #fff;
 }
 //\\
-
-
-if(res.data.code == 200){
-    this.$message({
-        type: 'success',
-        message: `保存成功`
-    });    
-}else{
-    this.$message({
-        type: 'error',
-        message: res.data.msg
-    });          
-}
 
 
 //提前为内置方法封装自定义方法
@@ -301,10 +306,16 @@ ctrl + R   >   scp
 
 npm cache clean --force 清缓存
 
+// win10刷新dns
+ipconfig /flushdns
 
 
 
-
+## ECharts笔记
+// 偏移
+grid: {
+      top: '5% '
+    },
 
 
 
